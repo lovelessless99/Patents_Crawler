@@ -1,0 +1,45 @@
+{
+    "patents": [{
+        "patent_abstract": "A wireless access node to facilitate increased quality of service in consideration of medical information comprises a wireless communication transceiver and a processing system. The wireless communication transceiver is configured to receive medical data transmitted from a wireless communication device served by the wireless access node, wherein the wireless communication device senses the medical data from a user of the wireless communication device. The processing system is configured to determine a quality of service level for the wireless communication device based on the medical data, and implement the quality of service level for the wireless communication device.",
+        "patent_num_claims": "20",
+        "patent_num_combined_citations": "16",
+        "assignees": [{
+            "assignee_id": "org_l01ZoLIGyuveWWYs6CgN",
+            "assignee_organization": "Sprint Communications Company L.P.",
+            "assignee_first_name": None,
+            "assignee_last_name": None,
+            "assignee_country": "US",
+            "assignee_key_id": "230659"
+        }],
+        "cited_patents": [{
+                "cited_patent_number": "6654631"
+            },
+            {
+                "cited_patent_number": "8489066"
+            },
+            {
+                "cited_patent_number": "8612693"
+            },
+            {
+                "cited_patent_number": "8630820"
+            },
+            {
+                "cited_patent_number": "8634799"
+            },
+            {
+                "cited_patent_number": "8721543"
+            },
+            {
+                "cited_patent_number": "9026190"
+            },
+            {
+                "cited_patent_number": "9035775"
+            }
+        ],
+        "citedby_patents": [{
+            "citedby_patent_number": None
+        }]
+    }],
+    "count": 1,
+    "total_patent_count": 1
+}
