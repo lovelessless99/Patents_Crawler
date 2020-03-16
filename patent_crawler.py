@@ -34,9 +34,25 @@ def setting_to_json(configfile):
                         params['s'] = sort
 
                 url = "https://www.patentsview.org/api/%s/query?" % endpoint
-                result = requests.post(url, json.dumps(params)) # single quote to double quote
-                if judge_status(result.status_code, params) == True:
-                        result_list.append(json.loads(result.text))
+                # result = requests.post(url, json.dumps(params), timeout=10) # single quote to double quote
+                # if judge_status(result.status_code, params) == True:
+                #         if json.loads(result.text)["count"] > 0:
+                #                 result_list.append(json.loads(result.text))
+
+                while True:
+                        url = "https://www.patentsview.org/api/%s/query?" % endpoint
+                        try:
+                                result = requests.post(url, data=json.dumps(params), timeout=5)
+                                if judge_status(result.status_code, params) == True:
+                                        if json.loads(result.text)["count"] > 0:
+                                                result_list.append(json.loads(result.text))
+                                break
+                        except requests.Timeout:
+                                print("Timeout! id = %s" % i)
+                                
+                        except requests.ConnectionError:
+                                print("Connection Error! id = %s" % i)
+                
 
 
         output_params = {
